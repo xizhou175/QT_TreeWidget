@@ -4,6 +4,10 @@
 #include <QAction>
 #include <QMainWindow>
 #include <QTreeWidget>
+#include <QLabel>
+#include <QDebug>
+#include <iostream>
+#include <QScrollArea>
 
 class MainWindow : public QMainWindow
 {
@@ -32,7 +36,16 @@ private:
 
     QAction *quitAction;
 
+    QLabel *imageLabel;
+    QLabel *labelFilename;
+    QPixmap curPixmap;
+
+    QScrollArea *centralWidget;
+
+    void displayImage(QTreeWidgetItem*);
+
 private slots:
+    void on_treeFiles_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
     void on_actAddFolder_triggered();
     void on_actAddFile_triggered();
 };

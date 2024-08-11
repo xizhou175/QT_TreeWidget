@@ -24,7 +24,7 @@ set( SOURCES
 set( HEADERS
      src/mainwindow.h )
 
-#set(APP_ICON_RESOURCE_WINDOWS "resources/resources.qrc")
+set(APP_ICON_RESOURCE_WINDOWS "resources/resources.qrc")
 add_executable(test ${SOURCES} ${HEADERS} ${APP_ICON_RESOURCE_WINDOWS})
 
 set_target_properties( test PROPERTIES DEBUG_POSTFIX {CMAKE_DEBUG_POSTFIX} )

@@ -1,0 +1,16 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource>
+    <file>./icons/folder1.bmp</file>
+    <file>./icons/824.bmp</file>
+    <file>./icons/delete1.bmp</file>
+    <file>./icons/fold.bmp</file>
+    <file>./icons/418.bmp</file>
+    <file>./icons/414.bmp</file>
+    <file>./icons/422.bmp</file>
+    <file>./icons/424.bmp</file>
+    <file>./icons/exit.bmp</file>
+    <file>./icons/open3.bmp</file>
+    <file>./icons/31.ico</file>
+  </qresource>
+</RCC>
