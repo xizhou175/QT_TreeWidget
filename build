@@ -1,0 +1,49 @@
+#!/bin/bash
+
+usage()
+{
+    #Display Help
+    echo "Syntax: scriptTemplage [-g|h]"
+    echo "options:"
+    echo "g      Debug build."
+    echo "h      Print this help"
+}
+
+Debug_Build()
+{
+    rm -rf debug
+    export CC=/home/xizhou/gcc12/gcc
+    export CXX=g++
+    mkdir debug
+    cd debug
+    cmake -DCMAKE_BUILD_TYPE=Debug ..
+    cmake --build .
+}
+
+Release_Build()
+{
+    rm -rf release
+    export CC=/home/xizhou/gcc12/gcc
+    export CXX=g++
+    mkdir release
+    cd release
+    cmake -DCMAKE_BUILD_TYPE=Release ..
+    cmake --build .
+}
+
+if [[ $# == 0 ]]
+then
+    Release_Build
+else
+    case "$1" in
+        -h|--help)
+            usage
+            ;;
+        -g)
+            Debug_Build
+            ;;
+        *)
+            usage 1
+            ;;
+    esac
+fi
